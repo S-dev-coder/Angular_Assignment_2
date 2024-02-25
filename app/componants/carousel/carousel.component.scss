@@ -1,0 +1,75 @@
+#image-carousel {
+  height: 90vh;
+  width: 200vh;
+  position: relative;
+  .splide__track {
+    height: 100%;
+    background-color: gray;
+    .btn__slider {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transform: translateY(-50%);
+      .prev-arrow,
+      .forw-arrow {
+        padding: 0.5rem;
+        border-radius: 50;
+        color: gray;
+       
+      }
+      mat-icon{
+        height: auto;
+        width: auto;
+      }
+      .material-icons{
+        font-size: 4rem;
+      }
+    }
+
+    .splide__list {
+      height: 100%;
+      overflow: hidden;
+      .splide__slide {
+        height: 100%; // Make each slide fill the full height of the list
+        .splide__img {
+          height: 100%;
+          width: 100%;
+          display: block;
+          margin: 0 auto;
+        }
+        .splide__caption{
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 3rem;
+          text-align: center;
+        }
+      }
+    }
+    .dot__indicator__list {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .dot {
+        display: inline-block;
+        width: 2rem;
+        height: 0.1rem;
+        background-color: rgb(43, 42, 42);
+        margin: 0 0.5rem;
+        &.active {
+          background-color: #ff0000;
+        } 
+      }
+      
+    }
+  }
+}
+

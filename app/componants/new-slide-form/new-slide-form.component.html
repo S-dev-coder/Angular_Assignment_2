@@ -1,0 +1,20 @@
+<section class="form__container">
+
+  <h1>Add new slide</h1>
+  <form [formGroup]="slideForm" class="new__slide" (ngSubmit)="onSubmit()">
+    <!-- Form with reactive form directives -->
+    <div class="form__group">
+      <!-- Form group for Image URL -->
+      <label for="imageUrl">Image Url</label>
+      <input placeholder="Enter URL for slide" type="text" class="form__control" formControlName="imageUrl" />
+
+    </div>
+    <div class="form__group">
+      <!-- Form group for Slide caption -->
+      <label for="caption">Slide caption</label>
+      <input placeholder="Enter caption for slide" type="text" class="form__control" formControlName="caption" />
+
+    </div>
+    <button class="btn" type="submit">Submit</button>
+  </form>
+</section>

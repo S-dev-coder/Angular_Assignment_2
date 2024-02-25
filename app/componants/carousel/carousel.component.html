@@ -1,0 +1,26 @@
+<section id="image-carousel" class="splide">
+  <div class="splide__track">
+    <!-- Navigation Buttons -->
+    <div class="btn__slider">
+      <span (click)="NavigateBackward()" class="prev-arrow"><mat-icon>keyboard_arrow_left</mat-icon></span>
+      <span (click)="NavigateForward()" class="forw-arrow"><mat-icon>keyboard_arrow_right</mat-icon></span>
+    </div>
+
+    <!-- Slides -->
+    <div class="splide__list">
+      <div class="splide__slide">
+        <img class="splide__img" src="{{ slides[activeSlideIndex].imageUrl }}" alt="" />
+        <div class="splide__caption">
+          <h2>{{ slides[activeSlideIndex].caption }}</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dot Indicator -->
+    <div class="dot__indicator__list">
+      @for (slide of slides; track $index) {
+      <span class="dot" [class.active]="$index === activeSlideIndex"></span>
+      }
+    </div>
+  </div>
+</section>

@@ -18,10 +18,7 @@ export class HomeComponent implements OnInit{
 
   // Constructor to inject CarouselService
   constructor(private carouselService: CarouselService) {}
-
-  // Lifecycle hook called after Angular has initialized all data-bound properties of a directive
   ngOnInit(): void {
-    // Assign the list of carousel slides from CarouselService to the component property
     this.slides = this.carouselService.CarouselList;
   }
   

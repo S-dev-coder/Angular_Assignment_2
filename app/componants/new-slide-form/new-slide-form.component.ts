@@ -10,13 +10,11 @@ import { CarouselService } from '../../services/carousel.service';
   styleUrl: './new-slide-form.component.scss'
 })
 export class NewSlideFormComponent {
-  // Declaring the FormGroup variable for the form
   slideForm!: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private carouselService: CarouselService) { }
 
   ngOnInit(): void {
-    // Call the initForm method when the component initializes
     this.initForm();
   }
 
@@ -28,7 +26,7 @@ export class NewSlideFormComponent {
     });
   }
 
-  onSubmit() {
+  OnSubmit() {
     console.log(this.slideForm);
     // Check if the form is valid
     if (this.slideForm.valid) {

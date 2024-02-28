@@ -1,8 +1,7 @@
 <section class="form__container">
 
   <h1>Add new slide</h1>
-  <form [formGroup]="slideForm" class="new__slide" (ngSubmit)="onSubmit()">
-    <!-- Form with reactive form directives -->
+  <form [formGroup]="slideForm" class="new__slide" (ngSubmit)="OnSubmit()">
     <div class="form__group">
       <!-- Form group for Image URL -->
       <label for="imageUrl">Image Url</label>
@@ -18,3 +17,4 @@
     <button class="btn" type="submit">Submit</button>
   </form>
 </section>
+
